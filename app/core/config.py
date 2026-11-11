@@ -13,9 +13,9 @@ class Settings(BaseSettings):
     tavily_api_key: str=""
     pinecone_api_key: str=""
     pinecone_index_name: str="fde-it-support-rag"
-    pinecone_namespace: str="company-it-kb"
-    openai_model: str="gpt-4o-mini"
-    embedding_model: str="text-embedding-3-small"
+    pinecone_namespace: str="company-it-kb-hf"
+    huggingFace_model: str="sentence-transformers/all-mpnet-base-v2"
+    embedding_model: str="sentence-transformers/all-mpnet-base-v2"
     top_k: int=4
     max_retrievals: int=1
     admin_api_key: str="nikhil_@2006"

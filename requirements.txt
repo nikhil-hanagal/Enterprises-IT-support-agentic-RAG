@@ -15,3 +15,5 @@ openai=3.42.1
 pypdf= 6.21.4
 python-docx=1.2.0
 python-dotenv=1.2.4
+langchain-huggingface 
+sentence-transformers
