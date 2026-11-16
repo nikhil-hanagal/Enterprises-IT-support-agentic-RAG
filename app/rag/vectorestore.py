@@ -44,7 +44,7 @@ def get_embeddings_dimension(model_name:str | None=None)->int:
         return 384
     
     if  "all-mpnet-base-v2" in normalized:
-        return 768,
+        return 768
 
     if "all-minilm-l6-v2" in normalized:
         return 384
@@ -113,8 +113,9 @@ def get_VectorStore():
     return _VectorStore
 
 def get_retriever():
-    return get_retriever().as_retriever(search_kwargs={"k":settings.top_k})
-
+    return get_VectorStore().as_retriever(
+        search_kwargs={"k": settings.top_k}
+    )
 def add_document(chunks):
     store=get_VectorStore()
     return store.add_documents(chunks)
